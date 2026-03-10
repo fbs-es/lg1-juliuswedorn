@@ -8,14 +8,13 @@ public class Aufgabe08 {
     public static String check(boolean gefahr, double gewicht, boolean masseKorrekt, boolean zerbrechlich) {
         if (gefahr) {
             return "Aufnahme verweigern.";
-        } else if (gewicht >= 31.5 || !masseKorrekt) {
-            return "Verweis an Schalter.";
-        } else {
-            if (zerbrechlich) {
-                return "Annahme & Druck. Vermerk 'Vorsicht'";
-            } else {
-                return "Annahme & Druck.";
-            }
         }
+        if (gewicht >= 31.5 || !masseKorrekt) {
+            return "Verweis an Schalter.";
+        }
+        if (zerbrechlich) {
+            return "Annahme & Druck. Vermerk 'Vorsicht'";
+        }
+        return "Annahme & Druck.";
     }
 }
