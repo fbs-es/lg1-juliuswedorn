@@ -42,7 +42,7 @@ public class Main {
             String input = sc.nextLine();
             if (Utility.isInputValid(input, 1, 100)) {
                 i++;
-                status = game.Check(Integer.parseInt(input));
+                status = game.check(Integer.parseInt(input));
                 System.out.println(status);
             }
         }

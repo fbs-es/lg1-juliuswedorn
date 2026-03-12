@@ -10,22 +10,14 @@ public class Spielvariante_1 {
         this.secretZahl = Utility.Random(u, o);
     }
 
-    public String Check(int guess) {
+    public String check(int guess) {
         if (guess == secretZahl) {
             return "Gewonnen!";
         }
-        String richtung;
-        if (guess < secretZahl) {
-            richtung = "größer";
-        } else {
-            richtung = "kleiner";
-        }
-        int distanz = Math.abs(guess - secretZahl);
 
-        if (distanz <= 5) {
-            return "Die Zahl ist etwas " + richtung + "!";
-        } else {
-            return "Die Zahl ist viel " + richtung + "!";
-        }
+        String richtung = (guess < secretZahl) ? "größer" : "kleiner";
+        String intensitaet = (Math.abs(guess - secretZahl) <= 5) ? "etwas" : "viel";
+
+        return String.format("Die Zahl ist %s %s!", intensitaet, richtung);
     }
 }

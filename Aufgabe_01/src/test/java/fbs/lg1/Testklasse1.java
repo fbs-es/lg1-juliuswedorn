@@ -15,10 +15,10 @@ class Testklasse1 {
 
     @Test
     void testCheckLogic() {
-        assertEquals("Gewonnen!", game.Check(50));
-        assertEquals("Die Zahl ist viel größer!", game.Check(10));
-        assertEquals("Die Zahl ist etwas größer!", game.Check(45));
-        assertEquals("Die Zahl ist viel kleiner!", game.Check(110));
-        assertEquals("Die Zahl ist etwas kleiner!", game.Check(55));
+        assertEquals("Gewonnen!", game.check(50));
+        assertEquals("Die Zahl ist viel größer!", game.check(10));
+        assertEquals("Die Zahl ist etwas größer!", game.check(45));
+        assertEquals("Die Zahl ist viel kleiner!", game.check(110));
+        assertEquals("Die Zahl ist etwas kleiner!", game.check(55));
     }
 }
