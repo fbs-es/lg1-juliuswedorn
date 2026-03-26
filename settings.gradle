@@ -1,3 +1,5 @@
 rootProject.name = 'java-lehrgang-1'
 include 'Aufgabe_01'
 include 'Aufgabe_08'
+include 'ArrayTestProjekt'
+include 'Aufgabe_16'

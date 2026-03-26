@@ -19,7 +19,10 @@ class Aufgabe13Test {
             "0, false, false, 0",
             "4, true,  true,  25"
     })
-    void testCheck2(int size, boolean ausland, boolean express, int expected) {
-        assertEquals(expected, Aufgabe08.check2(size, ausland, express));
+    void testCheck2Combined(int size, boolean ausland, boolean express, int expected) {
+        int baseGeld = Aufgabe08.check2_base(size);
+        int totalGeld = Aufgabe08.check2_add(baseGeld, ausland, express);
+
+        assertEquals(expected, totalGeld);
     }
 }
