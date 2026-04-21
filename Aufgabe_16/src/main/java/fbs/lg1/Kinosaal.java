@@ -28,11 +28,7 @@ public class Kinosaal {
     private void initSaal() {
         for (int r = 0; r < reihen; r++) {
             for (int s = 0; s < sitze; s++) {
-                if (r == saalPlan.length - 1) {
-                    saalPlan[r][s] = SitzStatus.RESERVIERT;
-                } else {
-                    saalPlan[r][s] = SitzStatus.FREI;
-                }
+                saalPlan[r][s] = (r == saalPlan.length - 1) ? SitzStatus.RESERVIERT : SitzStatus.FREI;
             }
         }
     }
@@ -73,11 +69,7 @@ public class Kinosaal {
             int freiZaehler = 0;
 
             for (int s = anfang; s < sitze; s++) {
-                if (saalPlan[r][s] == SitzStatus.FREI) {
-                    freiZaehler++;
-                } else {
-                    freiZaehler = 0;
-                }
+                freiZaehler = (saalPlan[r][s] == SitzStatus.FREI) ? freiZaehler++ : 0;
 
                 if (freiZaehler == anzahl) {
                     this.startSitz = s - anzahl + 1;
@@ -144,11 +136,7 @@ public class Kinosaal {
                 System.out.print("Sitz: ");
                 int s = input(sitze, 1) - 1;
 
-                if (reservierePlatz(r, s)) {
-                    System.out.println("Erfolg!");
-                } else {
-                    System.out.println("Besetzt!");
-                }
+                System.out.println(reservierePlatz(r, s) ? "Erfolg!" : "Besetzt!");
 
                 return true;
             case 2:
