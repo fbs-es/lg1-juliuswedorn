@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 1. Parameterüberprüfung
 if [ -z "$1" ] || [ -z "$2" ]; then
