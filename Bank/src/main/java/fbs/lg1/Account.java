@@ -49,10 +49,15 @@ public class Account {
         return true;
     }
 
-    //public void  makePayment (String IBAN, float amount) throws Exception {
-    //    if (amount < 0) throw new Exception("Amount must be positive");
-    //    Account targetAccount =
-    //}
+    public boolean makePayment (String IBAN, float amount) throws Exception {
+        if (amount < 0) throw new Exception("Amount must be positive");
+        Account targetAccount = findAccount(IBAN);
+        if (targetAccount == null) throw new Exception("Account not found");
+        if(this.getBalance() <= amount) throw new Exception("Insufficient Balance");
+        this.withdrawMoney(amount);
+        targetAccount.depositBalance(amount);
+        return true;
+    }
 
     public boolean changeName(String newName)  throws Exception {
         if (newName == null)  throw new Exception("Name cant be null");
@@ -66,9 +71,17 @@ public class Account {
         return rand.nextLong(min, max);
     }
 
-    //private Account findAccount(String IBAN) {
+    private Account findAccount(String IBAN) {
+        BankTerminal bt = Main.getBankTerminal();
+        Account[] accounts = bt.getAccounts();
+        for (Account account : accounts) {
 
-    //}
+            if (account.getIBAN().equals(IBAN)) {
+                return account;
+            }
+        }
+        return null;
+    }
 
     //the Iban is only valid for AT (i think the docu on it is very bad)
     private String genIBAN(String country, long  blz, long  accountNumber) {

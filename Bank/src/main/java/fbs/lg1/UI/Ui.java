@@ -1,8 +1,10 @@
-package fbs.lg1;
+package fbs.lg1.UI;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.function.Function;
 
 public class Ui {
 
@@ -58,12 +60,21 @@ public class Ui {
 
     private void traverse(UiElement<?> choice) {
         if (choice.hasMethod()) {
-            String input = null;
-            if (choice.getPhraseType() != null) {
-                System.out.print("Enter input: ");
-                input = scanner.nextLine();
+            List<Function<String, ?>> parsers = choice.getParsers();
+            List<String> inputs = new ArrayList<>();
+
+            if (parsers != null && !parsers.isEmpty()) {
+                for (int i = 0; i < parsers.size(); i++) {
+                    if (parsers.size() == 1) {
+                        System.out.print("Enter input: ");
+                    } else {
+                        System.out.print("Enter input " + (i + 1) + ": ");
+                    }
+                    inputs.add(scanner.nextLine());
+                }
             }
-            List<Object> results = choice.executeMethod(input);
+
+            List<?> results = choice.executeMethod(inputs);
             for (Object result : results) {
                 System.out.println(result);
             }
