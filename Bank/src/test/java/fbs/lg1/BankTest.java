@@ -127,7 +127,7 @@ class BankTest {
 
         assertThatThrownBy(() -> ac.withdrawMoney(initialBalance + 1.00f))
                 .isInstanceOf(Exception.class)
-                .hasMessage("Not enoug Money");
+                .hasMessage("Not enough Money");
 
         assertThat((float) getFieldValue("Balance",ac)).isEqualTo(initialBalance);
     }

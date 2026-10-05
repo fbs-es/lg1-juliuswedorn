@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-class ScooterTest {
+class Aufgabe21Test {
 
     private Scooter scooter;
     private User user;
