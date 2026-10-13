@@ -10,6 +10,10 @@ public class DeliveryOrder {
     private Delivery delivery;
 
     public DeliveryOrder(int amount, Product product, Delivery delivery) {
+        initialize(amount, product, delivery);
+    }
+
+    private void initialize(int amount, Product product, Delivery delivery) {
         this.deliveryOrderId = Main.getApp().getDeliveryOrders().size() + 1;
         this.date = new Date().getTime();
         this.amount = amount;

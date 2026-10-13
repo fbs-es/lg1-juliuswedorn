@@ -1,5 +1,7 @@
 package fbs.lg1;
 
+import fbs.lg1.enums.DeliveryStatus;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,11 +11,15 @@ public class Customer {
     private String email;
     private List<Order> orders;
 
-    public Customer(String name, String email) {
-        initialise(name, email);
+    private final PaymentService  paymentService;
+
+    public Customer(String name, String email,PaymentService paymentService)
+    {
+        initialize(name, email);
+        this.paymentService = paymentService;
     }
 
-    private void initialise(String name, String email) {
+    private void initialize(String name, String email) {
         this.userId = Main.getApp().getCustomers().size() + 1;
         this.name = name;
         this.email = email;
@@ -34,12 +40,12 @@ public class Customer {
             throw new Exception("No more products available");
         }
 
-        if (!product.sellProduct(1)) {
-            throw new Exception("Product sale failed");
-        }
+        boolean paymentSuccess = this.paymentService.processPayment(product.getPrice());
+        if (!paymentSuccess) throw new Exception("Payment failed - Zahlung wurde abgelehnt");
+        if (!product.sellProduct(1)) throw new Exception("Product sale failed");
 
         int nextId = this.orders.size() + 1;
-        Order order = new Order(DeliveryStatus.Open, nextId, this);
+        Order order = new Order(DeliveryStatus.Open, nextId, this,this.paymentService);
         order.addProduct(product, 1);
 
         this.addOrder(order);

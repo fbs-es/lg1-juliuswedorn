@@ -3,6 +3,7 @@ subprojects {
 
     repositories {
         mavenCentral()
+        mavenLocal()
     }
 
     java {
@@ -22,17 +23,15 @@ subprojects {
         useJUnitPlatform()
         reports {
             junitXml.required = true
-            html.required = true 
+            html.required = true
         }
-
         testLogging {
             events "passed", "skipped", "failed"
             showStandardStreams = true
             exceptionFormat = 'full'
         }
-
         afterSuite { desc, result ->
-            if (!desc.parent) { 
+            if (!desc.parent) {
                 println "\n" + "="*60
                 println " PROJEKT:    ${project.name}"
                 println " BESCHREIBUNG: ${project.description ?: 'Keine Beschreibung hinterlegt'}"
@@ -41,6 +40,9 @@ subprojects {
                 println "="*60 + "\n"
             }
         }
+    }
+    javadoc {
+        destinationDir = file("docs/javadoc")
     }
 }
 

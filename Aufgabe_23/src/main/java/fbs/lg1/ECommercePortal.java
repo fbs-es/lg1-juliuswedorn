@@ -2,6 +2,7 @@ package fbs.lg1;
 
 import fbs.lg1.UI.Ui;
 import fbs.lg1.UI.UiElement;
+import fbs.lg1.enums.DeliveryStatus;
 
 import java.util.ArrayList;
 import java.util.Date;

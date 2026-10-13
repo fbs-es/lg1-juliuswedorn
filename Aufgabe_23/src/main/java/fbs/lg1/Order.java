@@ -1,5 +1,7 @@
 package fbs.lg1;
 
+import fbs.lg1.enums.DeliveryStatus;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +12,14 @@ public class Order {
     private Customer customer;
     private List<OrderPosition> orderPositions = new ArrayList<>();
 
-    public Order(DeliveryStatus deliveryStatus, int orderId, Customer customer) {
+    private final PaymentService paymentService;
+
+    public Order(DeliveryStatus deliveryStatus, int orderId, Customer customer, PaymentService paymentService) {
+        initialize(deliveryStatus, orderId, customer);
+        this.paymentService = paymentService;
+    }
+
+    private void initialize(DeliveryStatus deliveryStatus, int orderId, Customer customer){
         this.deliveryStatus = deliveryStatus;
         this.orderId = orderId;
         this.customer = customer;
@@ -39,6 +48,7 @@ public class Order {
     public boolean cancel() {
         if (this.deliveryStatus == DeliveryStatus.Open) {
             this.deliveryStatus = DeliveryStatus.Canceled;
+            this.paymentService.cancelPayment("TMD-ORDER-" + this.orderId);
             return true;
         }
         return false;

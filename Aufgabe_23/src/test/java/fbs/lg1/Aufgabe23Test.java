@@ -1,12 +1,12 @@
 package fbs.lg1;
 
+import fbs.lg1.enums.DeliveryStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -17,6 +17,8 @@ class Aufgabe23Test {
     private Product product;
     private Delivery delivery;
 
+    private final PaymentService  paymentService= new BasePaymentService();
+
     @BeforeEach
     void setUp() {
         Main.newApp();
@@ -26,14 +28,14 @@ class Aufgabe23Test {
         product = new Product("Test Product", 10.00f, 5, 2, delivery);
         Main.getApp().addProduct(product);
 
-        customer = new Customer("Max Mustermann", "max@example.com");
+        customer = new Customer("Max Mustermann", "max@example.com",paymentService);
         Main.getApp().addCustomer(customer);
     }
 
     @Test
     @DisplayName("Should correctly initialize Customer with constructor")
     void testCustomerConstructor() throws Exception {
-        Customer newCustomer = new Customer("Anna", "anna@example.com");
+        Customer newCustomer = new Customer("Anna", "anna@example.com",paymentService);
 
         assertThat((int) getFieldValue("userId", newCustomer)).isEqualTo(2);
         assertThat((String) getFieldValue("name", newCustomer)).isEqualTo("Anna");
@@ -53,7 +55,7 @@ class Aufgabe23Test {
     @Test
     @DisplayName("Should correctly initialize Customer via private initialize method")
     void testCustomerInitialize() throws Exception {
-        Method initializeMethod = Customer.class.getDeclaredMethod("initialise", String.class, String.class);
+        Method initializeMethod = Customer.class.getDeclaredMethod("initialize", String.class, String.class);
         initializeMethod.setAccessible(true);
 
         initializeMethod.invoke(customer, "New Name", "new@example.com");
@@ -140,7 +142,7 @@ class Aufgabe23Test {
     @Test
     @DisplayName("Should correctly initialize Order and compute total price")
     void testOrderAndOrderPosition() throws Exception {
-        Order order = new Order(DeliveryStatus.Open, 1, customer);
+        Order order = new Order(DeliveryStatus.Open, 1, customer,paymentService);
 
         order.addProduct(product, 2);
 
@@ -160,7 +162,7 @@ class Aufgabe23Test {
     @Test
     @DisplayName("Should successfully cancel an open order")
     void testCancelOpenOrderSuccess() {
-        Order order = new Order(DeliveryStatus.Open, 1, customer);
+        Order order = new Order(DeliveryStatus.Open, 1, customer,paymentService);
 
         boolean canceled = order.cancel();
 
@@ -171,7 +173,7 @@ class Aufgabe23Test {
     @Test
     @DisplayName("Should fail to cancel an order that is already canceled or sent")
     void testCancelNonOpenOrderFails() throws Exception {
-        Order order = new Order(DeliveryStatus.Send, 1, customer);
+        Order order = new Order(DeliveryStatus.Send, 1, customer,paymentService);
 
         boolean canceled = order.cancel();
 

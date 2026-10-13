@@ -5,8 +5,12 @@ public class Delivery {
     private String name;
 
     public Delivery(String name) {
-        this.deliveryId = Main.getApp().getDeliveries().size() + 1;
+        initialize(name);
+    }
+
+    private void initialize(String name) {
         this.name = name;
+        this.deliveryId = Main.getApp().getDeliveries().size() +1;
     }
 
     public String getName() {

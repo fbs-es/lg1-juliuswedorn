@@ -1,1 +1,5 @@
 description = 'Bestellung'
+
+dependencies {
+    implementation 'at.just-better-services:aufgabe-23a:26.0.1'
+}

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"fbs.lg1"},{"l":"fbs.lg1.enums.Coins"},{"l":"fbs.lg1.enums.Items"}];updateSearchResults();

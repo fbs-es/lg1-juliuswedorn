@@ -9,10 +9,11 @@ public class Main {
 
     public static void startApp() {
         newApp();
+        PaymentService paymentService = new BasePaymentService();
         portal.addDelivery(new Delivery("DHLSlow"));
         portal.addDelivery(new Delivery("FailEx"));
-        portal.addCustomer(new Customer("Manfred", "manfred@gmail.com"));
-        portal.addCustomer(new Customer("Hildegard", "hildegard@gmail.com"));
+        portal.addCustomer(new Customer("Manfred", "manfred@gmail.com",paymentService));
+        portal.addCustomer(new Customer("Hildegard", "hildegard@gmail.com",paymentService));
         portal.addProduct(new Product("Smartphone", 499.99f, 10, 2, portal.getDeliveries().get(0)));
         portal.addProduct(new Product("Headphones", 89.99f, 25, 5, portal.getDeliveries().get(1)));
         portal.genApp();

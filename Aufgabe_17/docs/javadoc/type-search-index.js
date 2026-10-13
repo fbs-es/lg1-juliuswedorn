@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"fbs.lg1","l":"Aufgabe17"},{"p":"fbs.lg1.enums.Items","l":"Item"},{"p":"fbs.lg1.enums.Coins","l":"MuenzTyp"},{"p":"fbs.lg1","l":"Ui"},{"p":"fbs.lg1","l":"Utils"},{"p":"fbs.lg1","l":"Vendingmachine"}];updateSearchResults();

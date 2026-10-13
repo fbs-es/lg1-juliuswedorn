@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"fbs.lg1","l":"Main"},{"p":"fbs.lg1","l":"Spielvariante_1"},{"p":"fbs.lg1","l":"Spielvariante_2"},{"p":"fbs.lg1","l":"Utility"}];updateSearchResults();

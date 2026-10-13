@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"fbs.lg1","c":"ArrayTestProjekt","l":"ArrayTestProjekt()","u":"%3Cinit%3E()"},{"p":"fbs.lg1","c":"Main","l":"Main()","u":"%3Cinit%3E()"},{"p":"fbs.lg1","c":"Main","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"fbs.lg1","c":"ArrayTestProjekt","l":"run()"}];updateSearchResults();
