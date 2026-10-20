@@ -1,4 +1,20 @@
+plugins {
+    id 'java'
+}
+
 description = 'Bestellung'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/julius16869/lg1-juliuswedorn-packages")
+        credentials {
+            username = gprUser
+            password = gprKey
+        }
+    }
+}
 
 dependencies {
     implementation 'at.just-better-services:aufgabe-23a:26.0.1'

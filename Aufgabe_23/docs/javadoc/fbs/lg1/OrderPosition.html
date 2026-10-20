@@ -88,14 +88,9 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">fbs.lg1.OrderPosition</div>
 </div>
 <section class="class-description" id="class-description">
-<dl class="notes">
-<dt>All Implemented Interfaces:</dt>
-<dd><code>fbs.lg1.model.OrderPosition</code></dd>
-</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">OrderPosition</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements fbs.lg1.model.OrderPosition</span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,10 +102,10 @@ implements fbs.lg1.model.OrderPosition</span></div>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,float,fbs.lg1.model.Product)" class="member-name-link">OrderPosition</a><wbr>(int&nbsp;orderPositionId,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,float,fbs.lg1.Product)" class="member-name-link">OrderPosition</a><wbr>(int&nbsp;orderPositionId,
  int&nbsp;amount,
  float&nbsp;price,
- fbs.lg1.model.Product&nbsp;product)</code></div>
+ <a href="Product.html" title="class in fbs.lg1">Product</a>&nbsp;product)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -138,7 +133,7 @@ implements fbs.lg1.model.OrderPosition</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>fbs.lg1.model.Product</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Product.html" title="class in fbs.lg1">Product</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProduct()" class="member-name-link">getProduct</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -159,12 +154,12 @@ implements fbs.lg1.model.OrderPosition</span></div>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,int,float,fbs.lg1.model.Product)">
+<section class="detail" id="&lt;init&gt;(int,int,float,fbs.lg1.Product)">
 <h3>OrderPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">OrderPosition</span><wbr><span class="parameters">(int&nbsp;orderPositionId,
  int&nbsp;amount,
  float&nbsp;price,
- fbs.lg1.model.Product&nbsp;product)</span></div>
+ <a href="Product.html" title="class in fbs.lg1">Product</a>&nbsp;product)</span></div>
 </section>
 </li>
 </ul>
@@ -179,50 +174,30 @@ implements fbs.lg1.model.OrderPosition</span></div>
 <section class="detail" id="computeSubtotal()">
 <h3>computeSubtotal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">computeSubtotal</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>computeSubtotal</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.OrderPosition</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderPositionId()">
 <h3>getOrderPositionId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getOrderPositionId</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getOrderPositionId</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.OrderPosition</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getAmount()">
 <h3>getAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getAmount</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getAmount</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.OrderPosition</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getPrice</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getPrice</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.OrderPosition</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getProduct()">
 <h3>getProduct</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">fbs.lg1.model.Product</span>&nbsp;<span class="element-name">getProduct</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getProduct</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.OrderPosition</code></dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Product.html" title="class in fbs.lg1">Product</a></span>&nbsp;<span class="element-name">getProduct</span>()</div>
 </section>
 </li>
 </ul>

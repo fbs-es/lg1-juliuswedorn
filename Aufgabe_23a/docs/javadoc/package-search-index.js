@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"fbs.lg1"},{"l":"fbs.lg1.enums"},{"l":"fbs.lg1.model"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"fbs.lg1"}];updateSearchResults();

@@ -1,6 +1,8 @@
 {
     "name": "Java 21 Lehrgang 1",
-    "image": "mcr.microsoft.com/devcontainers/java:1-21",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21",
@@ -12,6 +14,7 @@
             "version": "22"
         }
     },
+    "forwardPorts": [3306],
     "customizations": {
         "vscode": {
             "settings": {
@@ -24,7 +27,8 @@
                 "vscjava.vscode-gradle",
                 "usernamehw.errorlens",
                 "sonarsource.sonarlint-vscode",
-                "streetsidesoftware.code-spell-checker"
+                "streetsidesoftware.code-spell-checker",
+                "cweijan.vscode-database-client2"
             ]
         }
     },

@@ -100,6 +100,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Staff</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></span></div>
+<div class="block">Represents an abstract staff member within the system.
+ Implements the <a href="PayTable.html" title="interface in fbs.lg1"><code>PayTable</code></a> interface to handle payment-related functionality.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -114,13 +116,19 @@ implements <a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></sp
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#firstName" class="member-name-link">firstName</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The first name of the staff member.</div>
+</div>
 <div class="col-first odd-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#lastName" class="member-name-link">lastName</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">The last name of the staff member.</div>
+</div>
 <div class="col-first even-row-color"><code>protected float</code></div>
 <div class="col-second even-row-color"><code><a href="#salary" class="member-name-link">salary</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The current salary of the staff member.</div>
+</div>
 </div>
 </section>
 </li>
@@ -137,10 +145,14 @@ implements <a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></sp
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changeSalary(float)" class="member-name-link">changeSalary</a><wbr>(float&nbsp;salary)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Changes the salary for the staff member by adding the specified amount.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFullName()" class="member-name-link">getFullName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the full name of the staff member by combining the first and last name.</div>
+</div>
 </div>
 </div>
 </div>
@@ -162,18 +174,21 @@ implements <a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></sp
 <section class="detail" id="firstName">
 <h3>firstName</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">firstName</span></div>
+<div class="block">The first name of the staff member.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastName">
 <h3>lastName</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">lastName</span></div>
+<div class="block">The last name of the staff member.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="salary">
 <h3>salary</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">salary</span></div>
+<div class="block">The current salary of the staff member.</div>
 </section>
 </li>
 </ul>
@@ -188,9 +203,16 @@ implements <a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></sp
 <section class="detail" id="changeSalary(float)">
 <h3>changeSalary</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">changeSalary</span><wbr><span class="parameters">(float&nbsp;salary)</span></div>
+<div class="block">Changes the salary for the staff member by adding the specified amount.
+ The resulting salary must be strictly greater than zero.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PayTable.html#changeSalary(float)">changeSalary</a></code>&nbsp;in interface&nbsp;<code><a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>salary</code> - the amount to adjust the current salary by (can be positive or negative)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the salary change was successful;
+         <code>false</code> if the resulting salary would be less than or equal to zero</dd>
 </dl>
 </section>
 </li>
@@ -198,6 +220,11 @@ implements <a href="PayTable.html" title="interface in fbs.lg1">PayTable</a></sp
 <section class="detail" id="getFullName()">
 <h3>getFullName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFullName</span>()</div>
+<div class="block">Retrieves the full name of the staff member by combining the first and last name.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a string containing the first name and last name separated by a space</dd>
+</dl>
 </section>
 </li>
 </ul>

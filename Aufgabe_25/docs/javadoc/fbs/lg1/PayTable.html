@@ -91,6 +91,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PayTable</span></div>
+<div class="block">Defines payment-related operations for staff members,
+ specifically providing a method to modify salaries.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,7 +109,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#changeSalary(float)" class="member-name-link">changeSalary</a><wbr>(float&nbsp;salary)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Changes the salary by a specified amount.</div>
+</div>
 </div>
 </div>
 </div>
@@ -126,6 +130,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="changeSalary(float)">
 <h3>changeSalary</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">changeSalary</span><wbr><span class="parameters">(float&nbsp;salary)</span></div>
+<div class="block">Changes the salary by a specified amount.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>salary</code> - the amount by which to change the salary (can be positive or negative)</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the salary was successfully changed; <code>false</code> otherwise</dd>
+</dl>
 </section>
 </li>
 </ul>

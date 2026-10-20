@@ -88,14 +88,9 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">fbs.lg1.Order</div>
 </div>
 <section class="class-description" id="class-description">
-<dl class="notes">
-<dt>All Implemented Interfaces:</dt>
-<dd><code>fbs.lg1.model.Order</code></dd>
-</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Order</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements fbs.lg1.model.Order</span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,9 +102,10 @@ implements fbs.lg1.model.Order</span></div>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(fbs.lg1.enums.DeliveryStatus,int,fbs.lg1.Customer)" class="member-name-link">Order</a><wbr>(fbs.lg1.enums.DeliveryStatus&nbsp;deliveryStatus,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(fbs.lg1.enums.DeliveryStatus,int,fbs.lg1.Customer,fbs.lg1.PaymentService)" class="member-name-link">Order</a><wbr>(<a href="enums/DeliveryStatus.html" title="enum class in fbs.lg1.enums">DeliveryStatus</a>&nbsp;deliveryStatus,
  int&nbsp;orderId,
- <a href="Customer.html" title="class in fbs.lg1">Customer</a>&nbsp;customer)</code></div>
+ <a href="Customer.html" title="class in fbs.lg1">Customer</a>&nbsp;customer,
+ fbs.lg1.PaymentService&nbsp;paymentService)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -126,7 +122,7 @@ implements fbs.lg1.model.Order</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addProduct(fbs.lg1.model.Product,int)" class="member-name-link">addProduct</a><wbr>(fbs.lg1.model.Product&nbsp;product,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addProduct(fbs.lg1.Product,int)" class="member-name-link">addProduct</a><wbr>(<a href="Product.html" title="class in fbs.lg1">Product</a>&nbsp;product,
  int&nbsp;amount)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
@@ -138,7 +134,7 @@ implements fbs.lg1.model.Order</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Customer.html" title="class in fbs.lg1">Customer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomer()" class="member-name-link">getCustomer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>fbs.lg1.enums.DeliveryStatus</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="enums/DeliveryStatus.html" title="enum class in fbs.lg1.enums">DeliveryStatus</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDeliveryStatus()" class="member-name-link">getDeliveryStatus</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
@@ -147,7 +143,7 @@ implements fbs.lg1.model.Order</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderId()" class="member-name-link">getOrderId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;fbs.lg1.model.OrderPosition&gt;</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="OrderPosition.html" title="class in fbs.lg1">OrderPosition</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderPositions()" class="member-name-link">getOrderPositions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -168,11 +164,12 @@ implements fbs.lg1.model.Order</span></div>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(fbs.lg1.enums.DeliveryStatus,int,fbs.lg1.Customer)">
+<section class="detail" id="&lt;init&gt;(fbs.lg1.enums.DeliveryStatus,int,fbs.lg1.Customer,fbs.lg1.PaymentService)">
 <h3>Order</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Order</span><wbr><span class="parameters">(fbs.lg1.enums.DeliveryStatus&nbsp;deliveryStatus,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Order</span><wbr><span class="parameters">(<a href="enums/DeliveryStatus.html" title="enum class in fbs.lg1.enums">DeliveryStatus</a>&nbsp;deliveryStatus,
  int&nbsp;orderId,
- <a href="Customer.html" title="class in fbs.lg1">Customer</a>&nbsp;customer)</span></div>
+ <a href="Customer.html" title="class in fbs.lg1">Customer</a>&nbsp;customer,
+ fbs.lg1.PaymentService&nbsp;paymentService)</span></div>
 </section>
 </li>
 </ul>
@@ -184,84 +181,52 @@ implements fbs.lg1.model.Order</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="addProduct(fbs.lg1.model.Product,int)">
+<section class="detail" id="addProduct(fbs.lg1.Product,int)">
 <h3>addProduct</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addProduct</span><wbr><span class="parameters">(fbs.lg1.model.Product&nbsp;product,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addProduct</span><wbr><span class="parameters">(<a href="Product.html" title="class in fbs.lg1">Product</a>&nbsp;product,
  int&nbsp;amount)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>addProduct</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="computeTotalPrice()">
 <h3>computeTotalPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">computeTotalPrice</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>computeTotalPrice</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="cancel()">
 <h3>cancel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">cancel</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>cancel</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderId()">
 <h3>getOrderId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getOrderId</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getOrderId</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderDate()">
 <h3>getOrderDate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getOrderDate</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getOrderDate</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDeliveryStatus()">
 <h3>getDeliveryStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">fbs.lg1.enums.DeliveryStatus</span>&nbsp;<span class="element-name">getDeliveryStatus</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getDeliveryStatus</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="enums/DeliveryStatus.html" title="enum class in fbs.lg1.enums">DeliveryStatus</a></span>&nbsp;<span class="element-name">getDeliveryStatus</span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Customer.html" title="class in fbs.lg1">Customer</a></span>&nbsp;<span class="element-name">getCustomer</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getCustomer</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderPositions()">
 <h3>getOrderPositions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;fbs.lg1.model.OrderPosition&gt;</span>&nbsp;<span class="element-name">getOrderPositions</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>getOrderPositions</code>&nbsp;in interface&nbsp;<code>fbs.lg1.model.Order</code></dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderPosition.html" title="class in fbs.lg1">OrderPosition</a>&gt;</span>&nbsp;<span class="element-name">getOrderPositions</span>()</div>
 </section>
 </li>
 </ul>
